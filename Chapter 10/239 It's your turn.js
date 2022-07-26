@@ -21,3 +21,7 @@ function multiplyByPi(x) {
 function multiply(x, y) {
   return x * y;
 }
+
+function mutiply(x, factor) {
+  return x * factor;
+}

@@ -2,18 +2,18 @@
 
 function incrementQuantityByName(cart, name) {
   var item = cart[name];
-  var quantity = item['quantity'];
+  var quantity = item["quantity"];
   var newQuantity = quantity + 1;
-  var newItem = objectSet(item, 'quantity', newQuantity);
+  var newItem = objectSet(item, "quantity", newQuantity);
   var newCart = objectSet(cart, name, newItem);
   return newCart;
 }
 
 function incrementSizeByName(cart, name) {
   var item = cart[name];
-  var size = item['size'];
+  var size = item["size"];
   var newSize = size + 1;
-  var newItem = objectSet(item, 'size', newSize);
+  var newItem = objectSet(item, "size", newSize);
   var newCart = objectSet(cart, name, newItem);
   return newCart;
 }
@@ -26,5 +26,14 @@ function incrementFieldByName(cart, name, field) {
   var newValue = value + 1;
   var newItem = objectSet(item, field, newValue);
   var newCart = objectSet(cart, name, newItem);
+  return newCart;
+}
+
+function incrementFieldByName(cart, name, field) {
+  const item = cart[name];
+  const value = item[field];
+  const newValue = value + 1;
+  const newItem = objectSet(item, field, newValue);
+  const newCart = objectSet(cart, name, newItem);
   return newCart;
 }
